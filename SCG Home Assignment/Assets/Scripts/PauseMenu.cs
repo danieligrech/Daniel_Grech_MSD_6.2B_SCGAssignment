@@ -21,18 +21,21 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    //If the user decides to resume the game while they are paused
     public void Resume(){
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
+    //If the user decides they want to pause the game
     void Pause(){
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
 
+    //If the user has the game currently paused and wishes to quit the game
     public void QuitGame(){
         Debug.Log("Quitting Game");
         Application.Quit();
